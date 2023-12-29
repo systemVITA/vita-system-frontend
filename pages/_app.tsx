@@ -9,9 +9,8 @@ function MyApp({ Component, pageProps }: AppProps) {
   if (!process.browser) React.useLayoutEffect = React.useEffect;
 
   return (
-    <Windmill usePreferences={true}>
       <Component {...pageProps} />
-    </Windmill>
+    
   )
 }
 export default MyApp
