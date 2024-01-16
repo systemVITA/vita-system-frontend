@@ -51,34 +51,34 @@ export default function Home() {
               <h1 className='m-[1rem] font-extrabold text-[30px] dark:text-gray-200'>
                   Faça seu Login
               </h1>
-        <form
-          action=""
-          method="post"
-          autoComplete='off'
-          className="flex flex-col gap-2 w-[100%] max-w-[100%]"
-          onSubmit={handleSubmit}
-        >
-          <div className="flex flex-col gap-2">
-            <label htmlFor="email">E-mail</label>
-            <input
-              type="text"
-              name='email'
-              className="p-[10px] bg-slate-900 outline-0 rounded"
-              onChange={InputValue}
-            />
-          </div>
-          <div className="flex flex-col gap-2">
-            <label htmlFor="password">Password</label>
-            <input
-              type="password"
-              name='password'
-              className="p-[10px] bg-slate-900 outline-0 rounded"
-              onChange={InputValue}
-            />
-          </div>
-          <div>
-            <p>Não tem conta? <span>Cadastre-se!</span></p>
-          </div>
+          <form
+            action=""
+            method="post"
+            autoComplete='off'
+            className="flex flex-col gap-2 w-[100%] max-w-[100%]"
+            onSubmit={handleSubmit}
+          >
+            <div className="flex flex-col gap-2">
+              <label htmlFor="email">E-mail</label>
+              <input
+                type="email"
+                name='email'
+                className="p-[10px] bg-slate-900 outline-0 rounded"
+                onChange={InputValue}
+              />
+            </div>
+            <div className="flex flex-col gap-2">
+              <label htmlFor="password">Password</label>
+              <input
+                type="password"
+                name='password'
+                className="p-[10px] bg-slate-900 outline-0 rounded"
+                onChange={InputValue}
+              />
+            </div>
+            <div>
+              <p>Não tem conta? <span>Cadastre-se!</span></p>
+            </div>
 
             <Button  type="submit"className='mt-4 bg-green-800 text-white' block>
               Fazer Login
