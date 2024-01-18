@@ -63,7 +63,7 @@ export default function Home() {
               <input
                 type="email"
                 name='email'
-                className="p-[10px] bg-slate-900 outline-0 rounded"
+                className="p-[10px] wt-slate-900 rouded border border block outline-0 rounded"
                 onChange={InputValue}
               />
             </div>
@@ -72,7 +72,7 @@ export default function Home() {
               <input
                 type="password"
                 name='password'
-                className="p-[10px] bg-slate-900 outline-0 rounded"
+                className="p-[10px] wt-slate-900 rouded border  border block outline-0 rounded"
                 onChange={InputValue}
               />
             </div>
@@ -86,8 +86,8 @@ export default function Home() {
             
          
           <fieldset className="border-t border-slate-50 mt-[10px]">
-            <legend className="mx-auto px-4 text-white text-1xl italic">ou</legend>
-            <div className="text-white pt-4">Acesse com o seu:</div>
+            <legend className="mx-auto px-4 text-black text-1xl italic">ou</legend>
+            <div className="text-black pt-4">Acesse com o seu:</div>
           </fieldset>
           <button
             onClick={() => signIn('github')}

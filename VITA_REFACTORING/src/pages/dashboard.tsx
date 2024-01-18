@@ -7,6 +7,13 @@ export default function Dashboard() {
     <section className="flex items-center justify-center h-[100vh]">
       <div className="flex flex-col items-center">
         <h2 className="m-[1rem] font-extrabold text-[30px]">Dashboard</h2>
+        <main>
+
+          
+        </main>
+        
+        
+        
         {session?.user?.name}
         <button onClick={() => signOut()}>Sign out</button>
       </div>
