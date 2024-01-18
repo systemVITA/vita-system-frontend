@@ -1,9 +1,10 @@
 import Image from 'next/image'
 import React from 'react'
-import { GetServerSideProps } from 'next'
+import { GetServerSideProps,NextPage } from 'next'
 import { getSession, signIn } from 'next-auth/react'
 import { useRouter } from 'next/router';
 import { FormEventHandler, useState } from 'react'
+import Link from 'next/link'
 
 import {  Button  } from '@roketid/windmill-react-ui'
 
@@ -80,9 +81,9 @@ export default function Home() {
               <p>Não tem conta? <span>Cadastre-se!</span></p>
             </div>
 
-            <Button  type="submit"className='mt-4 bg-green-800 text-white' block>
-              Fazer Login
-            </Button>
+              <Button  type="submit"className='mt-4 bg-green-800 text-white' block>
+                Fazer Login
+              </Button>
             
          
           <fieldset className="border-t border-slate-50 mt-[10px]">
