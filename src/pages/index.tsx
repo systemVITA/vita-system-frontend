@@ -1,13 +1,21 @@
 import Image from 'next/image'
-import React from 'react'
+import Link from 'next/link';
+import React, { useContext } from 'react'
 import { GetServerSideProps } from 'next'
 import { getSession, signIn } from 'next-auth/react'
 import { useRouter } from 'next/router';
 import { FormEventHandler, useState } from 'react'
 
-import {  Button  } from '@roketid/windmill-react-ui'
+/* se remover essa questao do dark reover isso aqui  */
+import { Label, Input, Button, WindmillContext } from '@roketid/windmill-react-ui'
 
 export default function Home() {
+/* talvez remover essa questao do dark */
+const { mode } = useContext(WindmillContext)
+const imgSource = mode === 'dark' ? '/assets/img/login-office-dark.jpg' : '/assets/img/login-office.jpg'
+
+
+
   const { push } = useRouter();
   const [data, setData] = useState({
     email: '',
@@ -30,7 +38,6 @@ export default function Home() {
       return push(result?.url)
     }
   }
-  const imgSource = '/assets/img/login-office.jpg';
 
   return (
     
@@ -38,9 +45,12 @@ export default function Home() {
       <div className='flex-1 h-full max-w-4xl mx-auto overflow-hidden bg-white rounded-lg shadow-xl dark:bg-gray-800'>
         <div className='flex flex-col overflow-y-auto md:flex-row'>
           <div className='relative h-32 md:h-auto md:w-1/2'>
+            {/* <img src={imgSource} alt="" className='hidden object-cover w-full h-full' /> */}
+          
+
             <Image
               aria-hidden='true'
-              className='hidden object-cover w-full h-full'
+              className='object-cover w-full h-full'
               src={imgSource}
               alt='Office'
               layout='fill'
@@ -81,9 +91,11 @@ export default function Home() {
             </div>
 
 
-              <Button  type="submit"className='mt-4 bg-green-800 text-white' block>
-                Fazer Login
-              </Button>
+              <Link href='/example' passHref={true}>
+                <Button  type="submit"className='mt-4 bg-green-800 text-white' block>
+                  Fazer Login
+                </Button>
+              </Link>
 
             
          
@@ -117,6 +129,22 @@ export default function Home() {
             </svg>
           Sign in with Twitter
           </button>
+          <p className='mt-4'>
+            <Link href="/example/forgot-password">
+              <span className='text-sm font-medium text-purple-600 dark:text-purple-400 hover:underline'>
+                Forgot your password?
+              </span>
+            </Link>
+          </p>
+
+          <p className='mt-1'>
+            <Link href="/example/create-account">
+              <span className='text-sm font-medium text-purple-600 dark:text-purple-400 hover:underline'>
+                Create account
+              </span>
+            </Link>
+          </p>
+
         </form>
             </div>
           </main>
