@@ -89,7 +89,7 @@ function Dashboard() {
   }, [page])
 
   return (
-    <Layout>
+    <div>
       <PageTitle>Dashboard</PageTitle>
  
       {/* <!-- Cards --> */}
@@ -720,7 +720,7 @@ function Dashboard() {
           <ChartLegend legends={lineLegends} />
         </ChartCard>
       </div>
-    </Layout>
+    </div>
   )
 }
 
