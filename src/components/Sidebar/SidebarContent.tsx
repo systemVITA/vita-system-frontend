@@ -24,15 +24,15 @@ function SidebarContent({ linkClicked }: ISidebarContent) {
     <div className="text-gray-500 dark:text-gray-400">
       <Link href="/#" passHref>
         <div className='ml-6 py-6'>
-          <a
+{/*           <a
             className="text-lg font-bold text-gray-800 dark:text-gray-200"
           >
             {appName}
-          </a>
+          </a> */}
         </div>
       </Link>
       <ul>
-        {routes.map((route) =>
+{/*         {routes.map((route) =>
           route.routes ? (
             <SidebarSubmenu route={route} key={route.name} linkClicked={linkClicked} />
           ) : (
@@ -66,7 +66,7 @@ function SidebarContent({ linkClicked }: ISidebarContent) {
               </Link>
             </li>
           )
-        )}
+        )} */}
       </ul>
       <div className="px-6 my-6">
         <Button>

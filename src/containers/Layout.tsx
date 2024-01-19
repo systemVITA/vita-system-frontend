@@ -12,6 +12,7 @@ function Layout({ children }: ILayout) {
   const { isSidebarOpen } = useContext(SidebarContext)
 
   return <SidebarProvider>
+
     <div
       className={`flex h-screen bg-gray-50 dark:bg-gray-900 ${isSidebarOpen && 'overflow-hidden'}`}
       >
@@ -23,7 +24,8 @@ function Layout({ children }: ILayout) {
         </Main>
       </div>
     </div>
-  </SidebarProvider>
+    
+   </SidebarProvider> 
 }
 
 export default Layout
