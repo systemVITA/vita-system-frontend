@@ -24,15 +24,15 @@ function SidebarContent({ linkClicked }: ISidebarContent) {
     <div className="text-gray-500 dark:text-gray-400">
       <Link href="/#" passHref>
         <div className='ml-6 py-6'>
-{/*           <a
+          <span
             className="text-lg font-bold text-gray-800 dark:text-gray-200"
           >
             {appName}
-          </a> */}
+          </span>
         </div>
       </Link>
-      <ul>
-{/*         {routes.map((route) =>
+{/*       <ul>
+        {routes.map((route) =>
           route.routes ? (
             <SidebarSubmenu route={route} key={route.name} linkClicked={linkClicked} />
           ) : (
@@ -41,7 +41,7 @@ function SidebarContent({ linkClicked }: ISidebarContent) {
                 href={route.path || '#'}
                 scroll={false}
               >
-                <a
+                <span
                   className={`inline-flex items-center w-full text-sm font-semibold transition-colors duration-150 hover:text-gray-800 dark:hover:text-gray-200 ${
                     routeIsActive(pathname, route)
                       ? 'dark:text-gray-100 text-gray-800'
@@ -62,12 +62,12 @@ function SidebarContent({ linkClicked }: ISidebarContent) {
                     icon={route.icon || ''}
                   />
                   <span className='ml-4'>{route.name}</span>
-                </a>
+                </span>
               </Link>
             </li>
           )
-        )} */}
-      </ul>
+        )}
+      </ul> */}
       <div className="px-6 my-6">
         <Button>
           Create account
